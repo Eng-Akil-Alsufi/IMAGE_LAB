@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="static/css/style5.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="desktop-5">
+    <div class="_5-20241028-055441-0004-1">
+   <!-- نموذج رفع الصورة -->
+<form id="uploadForm" enctype="multipart/form-data">
+  <label for="image-input" class="upload-label">
+      <img class="clip-path-group10" src="static/images/P5images/clip-path-group9.svg" alt="Upload Image" />
+  </label>
+  <input type="file" id="image-input" name="image" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+</form>
+
+<!-- زر تحديد الألوان -->
+<div id="colorPicker" class="color-picker-container" style="display: none;">
+  <label for="color-input" class="color-picker-label">
+      <img class="clip-path-group11" src="static/images/P5images/clip-path-group10.svg" alt="Color Picker" />
+  </label>
+  <input type="color" id="color-input" style="display: none;">
+</div>
+      <img class="clip-path-group" src="static/images/P5images/clip-path-group0.svg" />
+      <img class="vector" src="static/images/P5images/vector0.svg" />
+      <img class="vector2" src="static/images/P5images/vector1.svg" />
+      <img class="clip-path-group2" src="static/images/P5images/clip-path-group1.svg" />
+      <img class="clip-path-group3" src="static/images/P5images/clip-path-group2.svg" />
+      <img class="clip-path-group4" src="static/images/P5images/clip-path-group3.svg" />
+      <img class="clip-path-group5" src="static/images/P5images/clip-path-group4.svg" />
+      <img class="clip-path-group6" src="static/images/P5images/clip-path-group5.svg" />
+      <img class="clip-path-group7" src="static/images/P5images/clip-path-group6.svg" />
+       <div class="tv-container">
+        <video class="clip-path-group8" autoplay loop muted>
+             <source src="static/Video/P5.mp4" type="video/mp4">
+             Your browser does not support the video tag.
+          </video>
+          <img class="clip-path-group9" src="static/images/P5images/clip-path-group8.svg" />
+      </div>
+      <img class="group" src="static/images/P5images/group0.svg" />
+      <img class="group2" src="static/images/P5images/group1.svg" />
+      <img class="group3" src="static/images/P5images/group2.svg" />
+      <img class="group4" src="static/images/P5images/group3.svg" />
+      <img class="group5" src="static/images/P5images/group4.svg" />
+      <img class="group6" src="static/images/P5images/group5.svg" />
+      <img class="group7" src="static/images/P5images/group6.svg" />
+      <img class="group8" src="static/images/P5images/group7.svg" />
+      <img class="group9" src="static/images/P5images/group8.svg" />
+      <img class="group10" src="static/images/P5images/group9.svg" />
+      <img class="group11" src="static/images/P5images/group10.svg" />
+      <img class="group12" src="static/images/P5images/group11.svg" />
+      <img class="group13" src="static/images/P5images/group12.svg" />
+      <img class="group14" src="static/images/P5images/group13.svg" />
+      <img class="group15" src="static/images/P5images/group14.svg" />
+      <img class="group16" src="static/images/P5images/group15.svg" />
+      <img class="group17" src="static/images/P5images/group16.svg" />
+      <img class="group18" src="static/images/P5images/group17.svg" />
+      <img class="group19" src="static/images/P5images/group18.svg" />
+      <img class="group20" src="static/images/P5images/group19.svg" />
+      <img class="group21" src="static/images/P5images/group20.svg" />
+      <img class="group22" src="static/images/P5images/group21.svg" />
+      <img class="group23" src="static/images/P5images/group22.svg" />
+      <img class="group24" src="static/images/P5images/group23.svg" />
+      <img class="group25" src="static/images/P5images/group24.svg" />
+      <img class="clip-path-group12" src="static/images/P5images/clip-path-group11.svg" />
+      <img class="group26" src="static/images/P5images/group25.svg" />
+      <img class="group27" src="static/images/P5images/group26.svg" />
+      <img class="group28" src="static/images/P5images/group27.svg" />
+      <img class="group29" src="static/images/P5images/group28.svg" />
+      <img class="group30" src="static/images/P5images/group29.svg" />
+      <img class="group31" src="static/images/P5images/group30.svg" />
+      <img class="group32" src="static/images/P5images/group31.svg" />
+      <img class="group33" src="static/images/P5images/group32.svg" />
+      <img class="group34" src="static/images/P5images/group33.svg" />
+      <img class="group35" src="static/images/P5images/group34.svg" />
+      <img class="group36" src="static/images/P5images/group35.svg" />
+      <img class="group37" src="static/images/P5images/group36.svg" />
+      <img class="group38" src="static/images/P5images/group37.svg" />
+      <img class="group39" src="static/images/P5images/group38.svg" />
+      <img class="group40" src="static/images/P5images/group39.svg" />
+      <img class="group41" src="static/images/P5images/group40.svg" />
+      <img class="group42" src="static/images/P5images/group41.svg" />
+      <img class="group43" src="static/images/P5images/group42.svg" />
+      <img class="group44" src="static/images/P5images/group43.svg" />
+      <img class="group45" src="static/images/P5images/group44.svg" />
+      <img class="group46" src="static/images/P5images/group45.svg" />
+      <img class="group47" src="static/images/P5images/group46.svg" />
+      <img class="group48" src="static/images/P5images/group47.svg" />
+      <img class="group49" src="static/images/P5images/group48.svg" />
+      <img class="group50" src="static/images/P5images/group49.svg" />
+      <img class="group51" src="static/images/P5images/group50.svg" />
+      <img class="group52" src="static/images/P5images/group51.svg" />
+      <img class="group53" src="static/images/P5images/group52.svg" />
+      <img class="group54" src="static/images/P5images/group53.svg" />
+      <img class="group55" src="static/images/P5images/group54.svg" />
+      <img class="group56" src="static/images/P5images/group55.svg" />
+      <img class="group57" src="static/images/P5images/group56.svg" />
+      <img class="group58" src="static/images/P5images/group57.svg" />
+      <img class="group59" src="static/images/P5images/group58.svg" />
+      <img class="group60" src="static/images/P5images/group59.svg" />
+      <img class="group61" src="static/images/P5images/group60.svg" />
+      <img class="group62" src="static/images/P5images/group61.svg" />
+      <img class="group63" src="static/images/P5images/group62.svg" />
+      <img class="group64" src="static/images/P5images/group63.svg" />
+      <img class="group65" src="static/images/P5images/group64.svg" />
+      <img class="group66" src="static/images/P5images/group65.svg" />
+      <img class="group67" src="static/images/P5images/group66.svg" />
+      <img class="group68" src="static/images/P5images/group67.svg" />
+      <img class="group69" src="static/images/P5images/group68.svg" />
+      <img class="group70" src="static/images/P5images/group69.svg" />
+      <img class="group71" src="static/images/P5images/group70.svg" />
+      <img class="group72" src="static/images/P5images/group71.svg" />
+      <img class="group73" src="static/images/P5images/group72.svg" />
+      <img class="group74" src="static/images/P5images/group73.svg" />
+      <img class="group75" src="static/images/P5images/group74.svg" />
+      <img class="group76" src="static/images/P5images/group75.svg" />
+      <img class="group77" src="static/images/P5images/group76.svg" />
+      <img class="group78" src="static/images/P5images/group77.svg" />
+      <img class="group79" src="static/images/P5images/group78.svg" />
+      <img class="group80" src="static/images/P5images/group79.svg" />
+      <img class="group81" src="static/images/P5images/group80.svg" />
+      <img class="group82" src="static/images/P5images/group81.svg" />
+      <img class="group83" src="static/images/P5images/group82.svg" />
+      <img class="group84" src="static/images/P5images/group83.svg" />
+      <img class="group85" src="static/images/P5images/group84.svg" />
+      <img class="group86" src="static/images/P5images/group85.svg" />
+      <img class="group87" src="static/images/P5images/group86.svg" />
+      <img class="group88" src="static/images/P5images/group87.svg" />
+      <img class="group89" src="static/images/P5images/group88.svg" />
+      <img class="group90" src="static/images/P5images/group89.svg" />
+      <img class="group91" src="static/images/P5images/group90.svg" />
+      <img class="group92" src="static/images/P5images/group91.svg" />
+      <img class="group93" src="static/images/P5images/group92.svg" />
+      <img class="group94" src="static/images/P5images/group93.svg" />
+      <img class="group95" src="static/images/P5images/group94.svg" />
+      <img class="group96" src="static/images/P5images/group95.svg" />
+      <img class="group97" src="static/images/P5images/group96.svg" />
+      <img class="group98" src="static/images/P5images/group97.svg" />
+      <img class="group99" src="static/images/P5images/group98.svg" />
+      <img class="group100" src="static/images/P5images/group99.svg" />
+      <img class="group101" src="static/images/P5images/group100.svg" />
+      <img class="group102" src="static/images/P5images/group101.svg" />
+      <img class="group103" src="static/images/P5images/group102.svg" />
+      <img class="group104" src="static/images/P5images/group103.svg" />
+      <img class="group105" src="static/images/P5images/group104.svg" />
+      <img class="group106" src="static/images/P5images/group105.svg" />
+      <img class="group107" src="static/images/P5images/group106.svg" />
+      <img class="group108" src="static/images/P5images/group107.svg" />
+      <img class="group109" src="static/images/P5images/group108.svg" />
+      <img class="group110" src="static/images/P5images/group109.svg" />
+      <img class="group111" src="static/images/P5images/group110.svg" />
+      <img class="group112" src="static/images/P5images/group111.svg" />
+      <img class="group113" src="static/images/P5images/group112.svg" />
+      <img class="group114" src="static/images/P5images/group113.svg" />
+      <img class="group115" src="static/images/P5images/group114.svg" />
+      <img class="group116" src="static/images/P5images/group115.svg" />
+      <img class="group117" src="static/images/P5images/group116.svg" />
+      <img class="group118" src="static/images/P5images/group117.svg" />
+      <img class="group119" src="static/images/P5images/group118.svg" />
+      <img class="group120" src="static/images/P5images/group119.svg" />
+      <img class="group121" src="static/images/P5images/group120.svg" />
+      <img class="group122" src="static/images/P5images/group121.svg" />
+      <img class="group123" src="static/images/P5images/group122.svg" />
+      <img class="group124" src="static/images/P5images/group123.svg" />
+      <img class="group125" src="static/images/P5images/group124.svg" />
+      <img class="group126" src="static/images/P5images/group125.svg" />
+      <img class="group127" src="static/images/P5images/group126.svg" />
+      <img class="group128" src="static/images/P5images/group127.svg" />
+      <img class="group129" src="static/images/P5images/group128.svg" />
+      <img class="group130" src="static/images/P5images/group129.svg" />
+      <img class="group131" src="static/images/P5images/group130.svg" />
+      <img class="group132" src="static/images/P5images/group131.svg" />
+      <img class="group133" src="static/images/P5images/group132.svg" />
+      <img class="group134" src="static/images/P5images/group133.svg" />
+      <img class="group135" src="static/images/P5images/group134.svg" />
+      <img class="group136" src="static/images/P5images/group135.svg" />
+      <img class="group137" src="static/images/P5images/group136.svg" />
+      <img class="group138" src="static/images/P5images/group137.svg" />
+      <img class="group139" src="static/images/P5images/group138.svg" />
+      <img class="group140" src="static/images/P5images/group139.svg" />
+      <img class="group141" src="static/images/P5images/group140.svg" />
+      <img class="group142" src="static/images/P5images/group141.svg" />
+      <img class="group143" src="static/images/P5images/group142.svg" />
+      <img class="group144" src="static/images/P5images/group143.svg" />
+      <img class="group145" src="static/images/P5images/group144.svg" />
+      <img class="group146" src="static/images/P5images/group145.svg" />
+      <img class="group147" src="static/images/P5images/group146.svg" />
+      <img class="group148" src="static/images/P5images/group147.svg" />
+      <img class="group149" src="static/images/P5images/group148.svg" />
+      <img class="group150" src="static/images/P5images/group149.svg" />
+      <img class="group151" src="static/images/P5images/group150.svg" />
+      <img class="group152" src="static/images/P5images/group151.svg" />
+      <img class="group153" src="static/images/P5images/group152.svg" />
+      <img class="group154" src="static/images/P5images/group153.svg" />
+      <img class="group155" src="static/images/P5images/group154.svg" />
+      <img class="group156" src="static/images/P5images/group155.svg" />
+      <img class="group157" src="static/images/P5images/group156.svg" />
+      <img class="group158" src="static/images/P5images/group157.svg" />
+      <img class="group159" src="static/images/P5images/group158.svg" />
+      <img class="group160" src="static/images/P5images/group159.svg" />
+      <img class="group161" src="static/images/P5images/group160.svg" />
+      <img class="group162" src="static/images/P5images/group161.svg" />
+      <img class="group163" src="static/images/P5images/group162.svg" />
+      <img class="group164" src="static/images/P5images/group163.svg" />
+      <img class="group165" src="static/images/P5images/group164.svg" />
+      <img class="group166" src="static/images/P5images/group165.svg" />
+    </div>
+    <div class="xd-components">
+      <a href="/p2">
+        <img class="component-5" src="static/images/P5images/component-50.svg" alt="Description of the image" />
+    </a>
+    </div>
+  </div>
+
+  <script>
+   function handleImageUpload(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const formData = new FormData();
+        formData.append('image', file);
+
+        fetch('/improve', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // إظهار زر اختيار الألوان بعد رفع الصورة بنجاح
+                document.getElementById('colorPicker').style.display = 'block';
+                
+                // فتح صفحة نتائج الألوان
+                const form = document.createElement('form');
+                form.method = 'POST';
+                form.action = '/color_result';
+                
+                const originalInput = document.createElement('input');
+                originalInput.type = 'hidden';
+                originalInput.name = 'original_image';
+                originalInput.value = data.original;
+                form.appendChild(originalInput);
+                
+                const colorAnalysisInput = document.createElement('input');
+                colorAnalysisInput.type = 'hidden';
+                colorAnalysisInput.name = 'color_analysis';
+                colorAnalysisInput.value = JSON.stringify(data.color_analysis);
+                form.appendChild(colorAnalysisInput);
+                
+                document.body.appendChild(form);
+                form.submit();
+                
+                alert('تم رفع الصورة بنجاح');
+            } else {
+                alert('خطأ في رفع الصورة: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('حدث خطأ أثناء رفع الصورة');
+        });
+    }
+}
+
+    // معالجة اختيار اللون
+    document.getElementById('color-input').addEventListener('change', function(event) {
+        const selectedColor = event.target.value;
+        console.log('Selected Color:', selectedColor);
+        // يمكنك إضافة المزيد من الإجراءات هنا
+    });
+</script>
+
+<style>
+    .upload-label, .color-picker-label {
+        cursor: pointer;
+    }
+    .color-picker-container {
+        position: relative;
+    }
+</style>
+
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/css/style3.css">
+  <style>
+    a, button, input, select, h1, h2, h3, h4, h5, * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: none;
+      text-decoration: none;
+      background: none;
+      -webkit-font-smoothing: antialiased;
+    }
+    menu, ol, ul { list-style-type: none; margin: 0; padding: 0; }
+    .hidden { display: none; }
+
+    /* تنسيق شريط التمرير */
+
+    .sliders-container {
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        width: 800px;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .slider-group {
+        margin: 10px 0;
+    }
+    
+    .slider-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .slider-group input[type="range"] {
+        width: 100%;
+    }
+    
+    .slider-group span {
+        /* display: inline-block; */
+        margin-left: 10px;
+    }
+
+    /* .sliders-container {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+} */
+
+.slider-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+}
+
+.slider-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.slider-group input[type="range"] {
+    width: 120px;
+    margin: 5px 0;
+}
+
+.slider-group span {
+    font-size: 12px;
+    color: #666;
+}
+
+/* تخصيص شكل شريط التمرير */
+.sliders-container {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* لضمان ظهور الأزرار في المقدمة */
+}
+
+.slider-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+}
+
+.slider-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.slider-group input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 120px;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    margin: 5px 0;
+}
+
+.slider-group span {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* تخصيص شكل شريط التمرير */
+.slider-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #53e8fc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.slider-group input[type="range"]::-webkit-slider-thumb:hover {
+    background: #45a049;
+}
+
+/* لدعم متصفح Firefox */
+.slider-group input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+/* لدعم متصفح Edge */
+.slider-group input[type="range"]::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* تخصيص شريط التمرير نفسه */
+.slider-group input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slider-group input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slider-group input[type="range"]::-ms-track {
+    width: 100%;
+    height: 5px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    cursor: pointer;
+}
+  </style>
+  <title>Image Uploader</title>
+</head>
+<body>
+  <div class="desktop-3">
+    <div class="_3-20241028-055441-0002-1">
+<!-- نموذج رفع الصورة -->
+      
+        <!-- نموذج رفع الصورة -->
+      <form id="uploadForm" enctype="multipart/form-data">
+        <label for="image-input">
+          <img class="clip-path-group10" src="static/images/P3images/clip-path-group9.svg" alt="Upload Image" />
+        </label>
+        <input type="file" id="image-input" name="image" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+        <button type="button" id="improveButton" onclick="improveImage()" style="display: none;"> 
+          <img class="clip-path-group11" src="static/images/P3images/clip-path-group10.svg" alt="Improve Image" />
+      </button>
+      </form>
+
+             <!-- شريط التمرير  -->
+      <div class="sliders-container" style="margin-top: 20px;">
+        <div class="slider-group">
+            <label for="brightness">السطوع:</label>
+            <input type="range" id="brightness" name="brightness" min="0" max="100" value="50">
+            <span id="brightnessValue">20</span>
+        </div>
+        
+        <div class="slider-group">
+            <label for="contrast">التباين:</label>
+            <input type="range" id="contrast" name="contrast" min="0" max="100" value="50">
+            <span id="contrastValue">50</span>
+        </div>
+        
+        <div class="slider-group">
+            <label for="sharpness">الحدة:</label>
+            <input type="range" id="sharpness" name="sharpness" min="0" max="100" value="50">
+            <span id="sharpnessValue">50</span>
+        </div>
+        
+        <div class="slider-group">
+            <label for="color">تشبع الألوان:</label>
+            <input type="range" id="color" name="color" min="0" max="100" value="50">
+            <span id="colorValue">30</span>
+        </div>
+
+        <div class="slider-group">
+            <label for="resolution">الدقة:</label>
+            <input type="range" id="resolution" name="resolution" min="0" max="400" value="50">
+            <span id="resolutionValue">100</span>
+        </div>
+    </div>
+    
+      <img class="clip-path-group" src="static/images/P3images/clip-path-group0.svg" />
+      <img class="vector" src="static/images/P3images/vector0.svg" />
+      <img class="vector2" src="static/images/P3images/vector1.svg" />
+      <img class="clip-path-group2" src="static/images/P3images/clip-path-group1.svg" />
+      <img class="clip-path-group3" src="static/images/P3images/clip-path-group2.svg" />
+      <img class="clip-path-group4" src="static/images/P3images/clip-path-group3.svg" />
+      <img class="clip-path-group5" src="static/images/P3images/clip-path-group4.svg" />
+      <img class="clip-path-group6" src="static/images/P3images/clip-path-group5.svg" />
+      <img class="clip-path-group7" src="static/images/P3images/clip-path-group6.svg" />
+      <!-- "clip-path-group9" هذءا هو الجزء الخاص بصورة الموجودة داخل شاشة التلفاز  -->
+
+      <img class="clip-path-group8" src="static/images/P3images/clip-path-group7.svg" />
+
+      <!-- "clip-path-group9" هذءا هو الجزء الخاص بصورة التلفاز -->
+      <img class="clip-path-group9" src="static/images/P3images/clip-path-group8.svg" />
+      <img class="group" src="static/images/P3images/group0.svg" />
+      <img class="group2" src="static/images/P3images/group1.svg" />
+      <img class="group3" src="static/images/P3images/group2.svg" />
+      <img class="group4" src="static/images/P3images/group3.svg" />
+      <img class="group5" src="static/images/P3images/group4.svg" />
+      <img class="group6" src="static/images/P3images/group5.svg" />
+      <img class="group7" src="static/images/P3images/group6.svg" />
+      <img class="group8" src="static/images/P3images/group7.svg" />
+      <img class="group9" src="static/images/P3images/group8.svg" />
+      <img class="group10" src="static/images/P3images/group9.svg" />
+      <img class="group11" src="static/images/P3images/group10.svg" />
+      <img class="group12" src="static/images/P3images/group11.svg" />
+      <img class="group13" src="static/images/P3images/group12.svg" />
+      <img class="group14" src="static/images/P3images/group13.svg" />
+      <img class="group15" src="static/images/P3images/group14.svg" />
+      <img class="group16" src="static/images/P3images/group15.svg" />
+      <img class="group17" src="static/images/P3images/group16.svg" />
+      <img class="group18" src="static/images/P3images/group17.svg" />
+      <img class="group19" src="static/images/P3images/group18.svg" />
+      <img class="group20" src="static/images/P3images/group19.svg" />
+      <img class="group21" src="static/images/P3images/group20.svg" />
+      <img class="group22" src="static/images/P3images/group21.svg" />
+      <img class="group23" src="static/images/P3images/group22.svg" />
+      <img class="group24" src="static/images/P3images/group23.svg" />
+      <img class="group25" src="static/images/P3images/group24.svg" />
+      <img class="clip-path-group12" src="static/images/P3images/clip-path-group11.svg" />
+      <img class="group26" src="static/images/P3images/group25.svg" />
+      <img class="group27" src="static/images/P3images/group26.svg" />
+      <img class="group28" src="static/images/P3images/group27.svg" />
+      <img class="group29" src="static/images/P3images/group28.svg" />
+      <img class="group30" src="static/images/P3images/group29.svg" />
+      <img class="group31" src="static/images/P3images/group30.svg" />
+      <img class="group32" src="static/images/P3images/group31.svg" />
+      <img class="group33" src="static/images/P3images/group32.svg" />
+      <img class="group34" src="static/images/P3images/group33.svg" />
+      <img class="group35" src="static/images/P3images/group34.svg" />
+      <img class="group36" src="static/images/P3images/group35.svg" />
+      <img class="group37" src="static/images/P3images/group36.svg" />
+      <img class="group38" src="static/images/P3images/group37.svg" />
+      <img class="group39" src="static/images/P3images/group38.svg" />
+      <img class="group40" src="static/images/P3images/group39.svg" />
+      <img class="group41" src="static/images/P3images/group40.svg" />
+      <img class="group42" src="static/images/P3images/group41.svg" />
+      <img class="group43" src="static/images/P3images/group42.svg" />
+      <img class="group44" src="static/images/P3images/group43.svg" />
+      <img class="group45" src="static/images/P3images/group44.svg" />
+      <img class="group46" src="static/images/P3images/group45.svg" />
+      <img class="group47" src="static/images/P3images/group46.svg" />
+      <img class="group48" src="static/images/P3images/group47.svg" />
+      <img class="group49" src="static/images/P3images/group48.svg" />
+      <img class="group50" src="static/images/P3images/group49.svg" />
+      <img class="group51" src="static/images/P3images/group50.svg" />
+      <img class="group52" src="static/images/P3images/group51.svg" />
+      <img class="group53" src="static/images/P3images/group52.svg" />
+      <img class="group54" src="static/images/P3images/group53.svg" />
+      <img class="group55" src="static/images/P3images/group54.svg" />
+      <img class="group56" src="static/images/P3images/group55.svg" />
+      <img class="group57" src="static/images/P3images/group56.svg" />
+      <img class="group58" src="static/images/P3images/group57.svg" />
+      <img class="group59" src="static/images/P3images/group58.svg" />
+      <img class="group60" src="static/images/P3images/group59.svg" />
+      <img class="group61" src="static/images/P3images/group60.svg" />
+      <img class="group62" src="static/images/P3images/group61.svg" />
+      <img class="group63" src="static/images/P3images/group62.svg" />
+      <img class="group64" src="static/images/P3images/group63.svg" />
+      <img class="group65" src="static/images/P3images/group64.svg" />
+      <img class="group66" src="static/images/P3images/group65.svg" />
+      <img class="group67" src="static/images/P3images/group66.svg" />
+      <img class="group68" src="static/images/P3images/group67.svg" />
+      <img class="group69" src="static/images/P3images/group68.svg" />
+      <img class="group70" src="static/images/P3images/group69.svg" />
+      <img class="group71" src="static/images/P3images/group70.svg" />
+      <img class="group72" src="static/images/P3images/group71.svg" />
+      <img class="group73" src="static/images/P3images/group72.svg" />
+      <img class="group74" src="static/images/P3images/group73.svg" />
+      <img class="group75" src="static/images/P3images/group74.svg" />
+      <img class="group76" src="static/images/P3images/group75.svg" />
+      <img class="group77" src="static/images/P3images/group76.svg" />
+      <img class="group78" src="static/images/P3images/group77.svg" />
+      <img class="group79" src="static/images/P3images/group78.svg" />
+      <img class="group80" src="static/images/P3images/group79.svg" />
+      <img class="group81" src="static/images/P3images/group80.svg" />
+      <img class="group82" src="static/images/P3images/group81.svg" />
+      <img class="group83" src="static/images/P3images/group82.svg" />
+      <img class="group84" src="static/images/P3images/group83.svg" />
+      <img class="group85" src="static/images/P3images/group84.svg" />
+      <img class="group86" src="static/images/P3images/group85.svg" />
+      <img class="group87" src="static/images/P3images/group86.svg" />
+      <img class="group88" src="static/images/P3images/group87.svg" />
+      <img class="group89" src="static/images/P3images/group88.svg" />
+      <img class="group90" src="static/images/P3images/group89.svg" />
+      <img class="group91" src="static/images/P3images/group90.svg" />
+      <img class="group92" src="static/images/P3images/group91.svg" />
+      <img class="group93" src="static/images/P3images/group92.svg" />
+      <img class="group94" src="static/images/P3images/group93.svg" />
+      <img class="group95" src="static/images/P3images/group94.svg" />
+      <img class="group96" src="static/images/P3images/group95.svg" />
+      <img class="group97" src="static/images/P3images/group96.svg" />
+      <img class="group98" src="static/images/P3images/group97.svg" />
+      <img class="group99" src="static/images/P3images/group98.svg" />
+      <img class="group100" src="static/images/P3images/group99.svg" />
+      <img class="group101" src="static/images/P3images/group100.svg" />
+      <img class="group102" src="static/images/P3images/group101.svg" />
+      <img class="group103" src="static/images/P3images/group102.svg" />
+      <img class="group104" src="static/images/P3images/group103.svg" />
+      <img class="group105" src="static/images/P3images/group104.svg" />
+      <img class="group106" src="static/images/P3images/group105.svg" />
+      <img class="group107" src="static/images/P3images/group106.svg" />
+      <img class="group108" src="static/images/P3images/group107.svg" />
+      <img class="group109" src="static/images/P3images/group108.svg" />
+      <img class="group110" src="static/images/P3images/group109.svg" />
+      <img class="group111" src="static/images/P3images/group110.svg" />
+      <img class="group112" src="static/images/P3images/group111.svg" />
+      <img class="group113" src="static/images/P3images/group112.svg" />
+      <img class="group114" src="static/images/P3images/group113.svg" />
+      <img class="group115" src="static/images/P3images/group114.svg" />
+      <img class="group116" src="static/images/P3images/group115.svg" />
+      <img class="group117" src="static/images/P3images/group116.svg" />
+      <img class="group118" src="static/images/P3images/group117.svg" />
+      <img class="group119" src="static/images/P3images/group118.svg" />
+      <img class="group120" src="static/images/P3images/group119.svg" />
+      <img class="group121" src="static/images/P3images/group120.svg" />
+      <img class="group122" src="static/images/P3images/group121.svg" />
+      <img class="group123" src="static/images/P3images/group122.svg" />
+      <img class="group124" src="static/images/P3images/group123.svg" />
+      <img class="group125" src="static/images/P3images/group124.svg" />
+      <img class="group126" src="static/images/P3images/group125.svg" />
+      <img class="group127" src="static/images/P3images/group126.svg" />
+      <img class="group128" src="static/images/P3images/group127.svg" />
+      <img class="group129" src="static/images/P3images/group128.svg" />
+      <img class="group130" src="static/images/P3images/group129.svg" />
+      <img class="group131" src="static/images/P3images/group130.svg" />
+      <img class="group132" src="static/images/P3images/group131.svg" />
+      <img class="group133" src="static/images/P3images/group132.svg" />
+      <img class="group134" src="static/images/P3images/group133.svg" />
+      <img class="group135" src="static/images/P3images/group134.svg" />
+      <img class="group136" src="static/images/P3images/group135.svg" />
+      <img class="group137" src="static/images/P3images/group136.svg" />
+      <img class="group138" src="static/images/P3images/group137.svg" />
+      <img class="group139" src="static/images/P3images/group138.svg" />
+      <img class="group140" src="static/images/P3images/group139.svg" />
+      <img class="group141" src="static/images/P3images/group140.svg" />
+      <img class="group142" src="static/images/P3images/group141.svg" />
+      <img class="group143" src="static/images/P3images/group142.svg" />
+      <img class="group144" src="static/images/P3images/group143.svg" />
+      <img class="group145" src="static/images/P3images/group144.svg" />
+      <img class="group146" src="static/images/P3images/group145.svg" />
+      <img class="group147" src="static/images/P3images/group146.svg" />
+      <img class="group148" src="static/images/P3images/group147.svg" />
+      <img class="group149" src="static/images/P3images/group148.svg" />
+      <img class="group150" src="static/images/P3images/group149.svg" />
+      <img class="group151" src="static/images/P3images/group150.svg" />
+      <img class="group152" src="static/images/P3images/group151.svg" />
+      <img class="group153" src="static/images/P3images/group152.svg" />
+      <img class="group154" src="static/images/P3images/group153.svg" />
+      <img class="group155" src="static/images/P3images/group154.svg" />
+      <img class="group156" src="static/images/P3images/group155.svg" />
+      <img class="group157" src="static/images/P3images/group156.svg" />
+      <img class="group158" src="static/images/P3images/group157.svg" />
+      <img class="group159" src="static/images/P3images/group158.svg" />
+      <img class="group160" src="static/images/P3images/group159.svg" />
+      <img class="group161" src="static/images/P3images/group160.svg" />
+      <div class="xd-components">
+        <a href="/p2">
+          <img class="component-5" src="static/images/P3images/component-50.svg" alt="Description of the image" />
+      </a>
+      </div>
+    </div>
+  </div>
+  <script>
+    let uploadedFileName = null;
+
+    function handleImageUpload(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const formData = new FormData();
+            formData.append('image', file);
+
+            fetch('/uploads', {  // تغيير المسار إلى '/uploads'
+            method: 'POST',
+            body: formData
+            })
+            .then(response => {
+            // التأكد من نجاح الاستجابة
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+            })
+            .then(data => {
+            if (data.success) {
+                uploadedFileName = data.filename;
+                displayUploadedImage(URL.createObjectURL(file));
+                document.getElementById('improveButton').style.display = 'block';
+            } else {
+                alert('خطأ في رفع الصورة: ' + data.message);
+            }
+            })
+            .catch(error => {
+            console.error('Error:', error);
+            alert('حدث خطأ أثناء رفع الصورة: ' + error.message);
+            });
+        }
+        }
+
+    function displayUploadedImage(src) {
+      let img = document.getElementById('uploadedImage');
+      if (!img) {
+        img = document.createElement('img');
+        img.id = 'uploadedImage';
+        // document.body.appendChild(img);
+      }
+      img.src = src;
+      img.alt = "Uploaded Image";
+    }
+
+    function improveImage() {
+    console.log('Improve button clicked');
+    console.log('uploadedFileName:', uploadedFileName);
+    
+    const formData = new FormData();
+    
+    // إضافة الصورة إذا كانت موجودة
+    if (uploadedFileName) {
+        formData.append('filename', uploadedFileName);
+    }
+
+    // إضافة قيم أشرطة التمرير
+    formData.append('brightness', document.getElementById('brightness').value);
+    formData.append('contrast', document.getElementById('contrast').value);
+    formData.append('sharpness', document.getElementById('sharpness').value);
+    formData.append('color', document.getElementById('color').value);
+    formData.append('resolution', document.getElementById('resolution').value);
+    console.log('Sending data:', Object.fromEntries(formData));
+
+    fetch('/improve', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Response data:', data);
+        if (data.success) {
+            window.location.href = data.redirect;
+        } else {
+            alert('حدث خطأ أثناء تحسين الصورة: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('حدث خطأ أثناء الاتصال بالخادم');
+    });
+  
+
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sliders = document.querySelectorAll('input[type="range"]');
+    
+    sliders.forEach(slider => {
+        const valueDisplay = document.getElementById(slider.id + 'Value');
+        
+        // تحديث القيمة المعروضة عند تحميل الصفحة
+        valueDisplay.textContent = slider.value;
+        
+        // إضافة مستمع حدث لتحديث القيمة المعروضة عند تحريك شريط التمرير
+        slider.addEventListener('input', function() {
+            valueDisplay.textContent = this.value;
+        });
+    });
+});
+  </script>
+</body>
+</html>

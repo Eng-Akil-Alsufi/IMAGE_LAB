@@ -1,0 +1,10 @@
+Flask
+Pillow
+numpy
+scipy
+opencv-python
+exifread
+scikit-image
+PyWavelets
+scikit-learn
+webcolors

@@ -1,0 +1,1271 @@
+.desktop-3,
+.desktop-3 * {
+  box-sizing: border-box;
+}
+.desktop-3 {
+  background: #ffffff;
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+._3-20241028-055441-0002-1 {
+  width: 1440px;
+  height: 1024px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+.clip-path-group {
+  height: auto;
+  position: absolute;
+  left: 707.18px;
+  top: 176.18px;
+  overflow: visible;
+}
+.vector {
+  width: 3.66%;
+  height: 6.5%;
+  position: absolute;
+  right: 11.56%;
+  left: 84.78%;
+  bottom: 75.3%;
+  top: 18.2%;
+  overflow: visible;
+}
+.vector2 {
+  width: 2.11%;
+  height: 3.74%;
+  position: absolute;
+  right: 12.33%;
+  left: 85.56%;
+  bottom: 76.65%;
+  top: 19.61%;
+  overflow: visible;
+}
+.clip-path-group2 {
+  height: auto;
+  position: absolute;
+  left: 81px;
+  top: 923.8px;
+  overflow: visible;
+}
+.clip-path-group3 {
+  height: auto;
+  position: absolute;
+  left: 81px;
+  top: 0px;
+  overflow: visible;
+}
+.clip-path-group4 {
+  height: auto;
+  position: absolute;
+  left: 569.31px;
+  top: 923.8px;
+  overflow: visible;
+}
+.clip-path-group5 {
+  height: auto;
+  position: absolute;
+  left: 569.31px;
+  top: 0px;
+  overflow: visible;
+}
+.clip-path-group6 {
+  height: auto;
+  position: absolute;
+  left: 113.19px;
+  top: 923.8px;
+  overflow: visible;
+}
+.clip-path-group7 {
+  height: auto;
+  position: absolute;
+  left: 113.19px;
+  top: 0px;
+  overflow: visible;
+}
+.clip-path-group8 {
+  height: auto;
+  position: absolute;
+  left: 57px;
+  top: 203.46px;
+  overflow: visible;
+}
+.clip-path-group9 {
+  height: auto;
+  position: absolute;
+  left: 45.09px;
+  top: 190.27px;
+  overflow: visible;
+}
+.clip-path-group10 {
+  height: auto;
+  position: absolute;
+  left: 964.15px;
+  top: 804.48px;
+  overflow: visible;
+}
+.group {
+  height: auto;
+  position: absolute;
+  left: 1011.2px;
+  top: 820.31px;
+  overflow: visible;
+}
+.group2 {
+  height: auto;
+  position: absolute;
+  left: 1022.48px;
+  top: 823.04px;
+  overflow: visible;
+}
+.group3 {
+  height: auto;
+  position: absolute;
+  left: 1033.29px;
+  top: 819.54px;
+  overflow: visible;
+}
+.group4 {
+  height: auto;
+  position: absolute;
+  left: 1037.46px;
+  top: 823.04px;
+  overflow: visible;
+}
+.group5 {
+  height: auto;
+  position: absolute;
+  left: 1047.6px;
+  top: 823.04px;
+  overflow: visible;
+}
+.group6 {
+  height: auto;
+  position: absolute;
+  left: 1058.42px;
+  top: 819.54px;
+  overflow: visible;
+}
+.group7 {
+  height: auto;
+  position: absolute;
+  left: 1072.89px;
+  top: 818.32px;
+  overflow: visible;
+}
+.group8 {
+  height: auto;
+  position: absolute;
+  left: 1077.84px;
+  top: 823.08px;
+  overflow: visible;
+}
+.group9 {
+  height: auto;
+  position: absolute;
+  left: 1094.17px;
+  top: 823.04px;
+  overflow: visible;
+}
+.group10 {
+  height: auto;
+  position: absolute;
+  left: 1104.99px;
+  top: 823.04px;
+  overflow: visible;
+}
+.group11 {
+  height: auto;
+  position: absolute;
+  left: 1115.8px;
+  top: 823.04px;
+  overflow: visible;
+}
+.clip-path-group11 {
+  height: auto;
+  position: absolute;
+  left: 705.01px;
+  top: 804.48px;
+  overflow: visible;
+}
+.group12 {
+  height: auto;
+  position: absolute;
+  left: 742.31px;
+  top: 820.31px;
+  overflow: visible;
+}
+.group13 {
+  height: auto;
+  position: absolute;
+  left: 750.92px;
+  top: 823.08px;
+  overflow: visible;
+}
+.group14 {
+  height: auto;
+  position: absolute;
+  left: 761.66px;
+  top: 819.54px;
+  overflow: visible;
+}
+.group15 {
+  height: auto;
+  position: absolute;
+  left: 771.86px;
+  top: 823.04px;
+  overflow: visible;
+}
+.group16 {
+  height: auto;
+  position: absolute;
+  left: 783.21px;
+  top: 823.08px;
+  overflow: visible;
+}
+.group17 {
+  height: auto;
+  position: absolute;
+  left: 793.41px;
+  top: 823.04px;
+  overflow: visible;
+}
+.group18 {
+  height: auto;
+  position: absolute;
+  left: 803.05px;
+  top: 823.04px;
+  overflow: visible;
+}
+.group19 {
+  height: auto;
+  position: absolute;
+  left: 816.31px;
+  top: 820.1px;
+  overflow: visible;
+}
+.group20 {
+  height: auto;
+  position: absolute;
+  left: 829.24px;
+  top: 823.2px;
+  overflow: visible;
+}
+.group21 {
+  height: auto;
+  position: absolute;
+  left: 839.52px;
+  top: 823.04px;
+  overflow: visible;
+}
+.group22 {
+  height: auto;
+  position: absolute;
+  left: 850.86px;
+  top: 819.54px;
+  overflow: visible;
+}
+.group23 {
+  height: auto;
+  position: absolute;
+  left: 855.31px;
+  top: 818.32px;
+  overflow: visible;
+}
+.group24 {
+  height: auto;
+  position: absolute;
+  left: 859.61px;
+  top: 820.47px;
+  overflow: visible;
+}
+.group25 {
+  height: auto;
+  position: absolute;
+  left: 865.73px;
+  top: 823.2px;
+  overflow: visible;
+}
+.clip-path-group12 {
+  height: auto;
+  position: absolute;
+  left: 1307.3px;
+  top: 137.21px;
+  overflow: visible;
+}
+.group26 {
+  height: auto;
+  position: absolute;
+  left: 1320.24px;
+  top: 178.51px;
+  overflow: visible;
+}
+.group27 {
+  height: auto;
+  position: absolute;
+  left: 1339.8px;
+  top: 177.31px;
+  overflow: visible;
+}
+.group28 {
+  height: auto;
+  position: absolute;
+  left: 1356.65px;
+  top: 183.06px;
+  overflow: visible;
+}
+.group29 {
+  height: auto;
+  position: absolute;
+  left: 1372.78px;
+  top: 182.8px;
+  overflow: visible;
+}
+.group30 {
+  height: auto;
+  position: absolute;
+  left: 1388.53px;
+  top: 178.77px;
+  overflow: visible;
+}
+.group31 {
+  height: auto;
+  position: absolute;
+  left: 692.81px;
+  top: 330.74px;
+  overflow: visible;
+}
+.group32 {
+  height: auto;
+  position: absolute;
+  left: 747.61px;
+  top: 330.74px;
+  overflow: visible;
+}
+.group33 {
+  height: auto;
+  position: absolute;
+  left: 920.16px;
+  top: 330.81px;
+  overflow: visible;
+}
+.group34 {
+  height: auto;
+  position: absolute;
+  left: 1068.15px;
+  top: 328.56px;
+  overflow: visible;
+}
+.group35 {
+  height: auto;
+  position: absolute;
+  left: 1202.55px;
+  top: 330.74px;
+  overflow: visible;
+}
+.group36 {
+  height: auto;
+  position: absolute;
+  left: 942.18px;
+  top: 486.99px;
+  overflow: visible;
+}
+.group37 {
+  height: auto;
+  position: absolute;
+  left: 969.77px;
+  top: 486.99px;
+  overflow: visible;
+}
+.group38 {
+  height: auto;
+  position: absolute;
+  left: 1019.87px;
+  top: 486.99px;
+  overflow: visible;
+}
+.group39 {
+  height: auto;
+  position: absolute;
+  left: 694.95px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group40 {
+  height: auto;
+  position: absolute;
+  left: 704.05px;
+  top: 574.18px;
+  overflow: visible;
+}
+.group41 {
+  height: auto;
+  position: absolute;
+  left: 724.92px;
+  top: 574.18px;
+  overflow: visible;
+}
+.group42 {
+  height: auto;
+  position: absolute;
+  left: 742.76px;
+  top: 573.72px;
+  overflow: visible;
+}
+.group43 {
+  height: auto;
+  position: absolute;
+  left: 759.92px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group44 {
+  height: auto;
+  position: absolute;
+  left: 780.34px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group45 {
+  height: auto;
+  position: absolute;
+  left: 795.16px;
+  top: 574.18px;
+  overflow: visible;
+}
+.group46 {
+  height: auto;
+  position: absolute;
+  left: 813.61px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group47 {
+  height: auto;
+  position: absolute;
+  left: 831.66px;
+  top: 574.18px;
+  overflow: visible;
+}
+.group48 {
+  height: auto;
+  position: absolute;
+  left: 849.32px;
+  top: 574.18px;
+  overflow: visible;
+}
+.group49 {
+  height: auto;
+  position: absolute;
+  left: 867.92px;
+  top: 573.72px;
+  overflow: visible;
+}
+.group50 {
+  height: auto;
+  position: absolute;
+  left: 883.75px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group51 {
+  height: auto;
+  position: absolute;
+  left: 898.56px;
+  top: 574.18px;
+  overflow: visible;
+}
+.group52 {
+  height: auto;
+  position: absolute;
+  left: 920.82px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group53 {
+  height: auto;
+  position: absolute;
+  left: 935.63px;
+  top: 574.18px;
+  overflow: visible;
+}
+.group54 {
+  height: auto;
+  position: absolute;
+  left: 953.67px;
+  top: 574.35px;
+  overflow: visible;
+}
+.group55 {
+  height: auto;
+  position: absolute;
+  left: 969.51px;
+  top: 580.75px;
+  overflow: visible;
+}
+.group56 {
+  height: auto;
+  position: absolute;
+  left: 980.44px;
+  top: 574.35px;
+  overflow: visible;
+}
+.group57 {
+  height: auto;
+  position: absolute;
+  left: 995.86px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group58 {
+  height: auto;
+  position: absolute;
+  left: 1015.25px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group59 {
+  height: auto;
+  position: absolute;
+  left: 1024.52px;
+  top: 573.72px;
+  overflow: visible;
+}
+.group60 {
+  height: auto;
+  position: absolute;
+  left: 1043.15px;
+  top: 574.35px;
+  overflow: visible;
+}
+.group61 {
+  height: auto;
+  position: absolute;
+  left: 1058.66px;
+  top: 573.72px;
+  overflow: visible;
+}
+.group62 {
+  height: auto;
+  position: absolute;
+  left: 1077.04px;
+  top: 573.72px;
+  overflow: visible;
+}
+.group63 {
+  height: auto;
+  position: absolute;
+  left: 1095.31px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group64 {
+  height: auto;
+  position: absolute;
+  left: 1115.16px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group65 {
+  height: auto;
+  position: absolute;
+  left: 1129.98px;
+  top: 574.18px;
+  overflow: visible;
+}
+.group66 {
+  height: auto;
+  position: absolute;
+  left: 1148.43px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group67 {
+  height: auto;
+  position: absolute;
+  left: 1166.48px;
+  top: 574.18px;
+  overflow: visible;
+}
+.group68 {
+  height: auto;
+  position: absolute;
+  left: 1184.14px;
+  top: 574.18px;
+  overflow: visible;
+}
+.group69 {
+  height: auto;
+  position: absolute;
+  left: 1202.74px;
+  top: 573.72px;
+  overflow: visible;
+}
+.group70 {
+  height: auto;
+  position: absolute;
+  left: 1218.57px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group71 {
+  height: auto;
+  position: absolute;
+  left: 1233.56px;
+  top: 573.72px;
+  overflow: visible;
+}
+.group72 {
+  height: auto;
+  position: absolute;
+  left: 1252.71px;
+  top: 573.72px;
+  overflow: visible;
+}
+.group73 {
+  height: auto;
+  position: absolute;
+  left: 1270.99px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group74 {
+  height: auto;
+  position: absolute;
+  left: 1285.26px;
+  top: 574.27px;
+  overflow: visible;
+}
+.group75 {
+  height: auto;
+  position: absolute;
+  left: 717.82px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group76 {
+  height: auto;
+  position: absolute;
+  left: 726.92px;
+  top: 617.79px;
+  overflow: visible;
+}
+.group77 {
+  height: auto;
+  position: absolute;
+  left: 747.8px;
+  top: 617.79px;
+  overflow: visible;
+}
+.group78 {
+  height: auto;
+  position: absolute;
+  left: 765.64px;
+  top: 617.34px;
+  overflow: visible;
+}
+.group79 {
+  height: auto;
+  position: absolute;
+  left: 782.79px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group80 {
+  height: auto;
+  position: absolute;
+  left: 797.78px;
+  top: 617.34px;
+  overflow: visible;
+}
+.group81 {
+  height: auto;
+  position: absolute;
+  left: 816.81px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group82 {
+  height: auto;
+  position: absolute;
+  left: 831.38px;
+  top: 617.81px;
+  overflow: visible;
+}
+.group83 {
+  height: auto;
+  position: absolute;
+  left: 853.46px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group84 {
+  height: auto;
+  position: absolute;
+  left: 870.23px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group85 {
+  height: auto;
+  position: absolute;
+  left: 885.05px;
+  top: 617.79px;
+  overflow: visible;
+}
+.group86 {
+  height: auto;
+  position: absolute;
+  left: 907.39px;
+  top: 617.34px;
+  overflow: visible;
+}
+.group87 {
+  height: auto;
+  position: absolute;
+  left: 924.81px;
+  top: 617.81px;
+  overflow: visible;
+}
+.group88 {
+  height: auto;
+  position: absolute;
+  left: 941.84px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group89 {
+  height: auto;
+  position: absolute;
+  left: 950.93px;
+  top: 617.79px;
+  overflow: visible;
+}
+.group90 {
+  height: auto;
+  position: absolute;
+  left: 969.53px;
+  top: 617.34px;
+  overflow: visible;
+}
+.group91 {
+  height: auto;
+  position: absolute;
+  left: 992.23px;
+  top: 617.79px;
+  overflow: visible;
+}
+.group92 {
+  height: auto;
+  position: absolute;
+  left: 1010.78px;
+  top: 617.34px;
+  overflow: visible;
+}
+.group93 {
+  height: auto;
+  position: absolute;
+  left: 1029.02px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group94 {
+  height: auto;
+  position: absolute;
+  left: 1038.29px;
+  top: 617.34px;
+  overflow: visible;
+}
+.group95 {
+  height: auto;
+  position: absolute;
+  left: 1051.78px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group96 {
+  height: auto;
+  position: absolute;
+  left: 1070.82px;
+  top: 617.79px;
+  overflow: visible;
+}
+.group97 {
+  height: auto;
+  position: absolute;
+  left: 1088.49px;
+  top: 617.79px;
+  overflow: visible;
+}
+.group98 {
+  height: auto;
+  position: absolute;
+  left: 1106.94px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group99 {
+  height: auto;
+  position: absolute;
+  left: 1130.68px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group100 {
+  height: auto;
+  position: absolute;
+  left: 1139.78px;
+  top: 617.79px;
+  overflow: visible;
+}
+.group101 {
+  height: auto;
+  position: absolute;
+  left: 1158.37px;
+  top: 617.34px;
+  overflow: visible;
+}
+.group102 {
+  height: auto;
+  position: absolute;
+  left: 1174.21px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group103 {
+  height: auto;
+  position: absolute;
+  left: 1190.98px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group104 {
+  height: auto;
+  position: absolute;
+  left: 1204.45px;
+  top: 617.79px;
+  overflow: visible;
+}
+.group105 {
+  height: auto;
+  position: absolute;
+  left: 1222.29px;
+  top: 617.34px;
+  overflow: visible;
+}
+.group106 {
+  height: auto;
+  position: absolute;
+  left: 1235.74px;
+  top: 617.89px;
+  overflow: visible;
+}
+.group107 {
+  height: auto;
+  position: absolute;
+  left: 1244.84px;
+  top: 617.79px;
+  overflow: visible;
+}
+.group108 {
+  height: auto;
+  position: absolute;
+  left: 1263.43px;
+  top: 617.34px;
+  overflow: visible;
+}
+.group109 {
+  height: auto;
+  position: absolute;
+  left: 687.23px;
+  top: 660.95px;
+  overflow: visible;
+}
+.group110 {
+  height: auto;
+  position: absolute;
+  left: 703.06px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group111 {
+  height: auto;
+  position: absolute;
+  left: 715.96px;
+  top: 661.41px;
+  overflow: visible;
+}
+.group112 {
+  height: auto;
+  position: absolute;
+  left: 733.66px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group113 {
+  height: auto;
+  position: absolute;
+  left: 750.4px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group114 {
+  height: auto;
+  position: absolute;
+  left: 759.11px;
+  top: 661.58px;
+  overflow: visible;
+}
+.group115 {
+  height: auto;
+  position: absolute;
+  left: 773.54px;
+  top: 661.43px;
+  overflow: visible;
+}
+.group116 {
+  height: auto;
+  position: absolute;
+  left: 795.2px;
+  top: 661.58px;
+  overflow: visible;
+}
+.group117 {
+  height: auto;
+  position: absolute;
+  left: 810.72px;
+  top: 660.95px;
+  overflow: visible;
+}
+.group118 {
+  height: auto;
+  position: absolute;
+  left: 834.54px;
+  top: 661.41px;
+  overflow: visible;
+}
+.group119 {
+  height: auto;
+  position: absolute;
+  left: 855.41px;
+  top: 661.41px;
+  overflow: visible;
+}
+.group120 {
+  height: auto;
+  position: absolute;
+  left: 873.11px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group121 {
+  height: auto;
+  position: absolute;
+  left: 890.61px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group122 {
+  height: auto;
+  position: absolute;
+  left: 910.61px;
+  top: 661.58px;
+  overflow: visible;
+}
+.group123 {
+  height: auto;
+  position: absolute;
+  left: 926.03px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group124 {
+  height: auto;
+  position: absolute;
+  left: 945.45px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group125 {
+  height: auto;
+  position: absolute;
+  left: 960.27px;
+  top: 661.41px;
+  overflow: visible;
+}
+.group126 {
+  height: auto;
+  position: absolute;
+  left: 988.09px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group127 {
+  height: auto;
+  position: absolute;
+  left: 1002.46px;
+  top: 660.95px;
+  overflow: visible;
+}
+.group128 {
+  height: auto;
+  position: absolute;
+  left: 1020.83px;
+  top: 660.95px;
+  overflow: visible;
+}
+.group129 {
+  height: auto;
+  position: absolute;
+  left: 1039.11px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group130 {
+  height: auto;
+  position: absolute;
+  left: 1062.32px;
+  top: 660.95px;
+  overflow: visible;
+}
+.group131 {
+  height: auto;
+  position: absolute;
+  left: 1075.8px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group132 {
+  height: auto;
+  position: absolute;
+  left: 1093.85px;
+  top: 661.41px;
+  overflow: visible;
+}
+.group133 {
+  height: auto;
+  position: absolute;
+  left: 1111.55px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group134 {
+  height: auto;
+  position: absolute;
+  left: 1128.29px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group135 {
+  height: auto;
+  position: absolute;
+  left: 1143.42px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group136 {
+  height: auto;
+  position: absolute;
+  left: 1158.27px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group137 {
+  height: auto;
+  position: absolute;
+  left: 1179.24px;
+  top: 661.41px;
+  overflow: visible;
+}
+.group138 {
+  height: auto;
+  position: absolute;
+  left: 1196.9px;
+  top: 661.41px;
+  overflow: visible;
+}
+.group139 {
+  height: auto;
+  position: absolute;
+  left: 1215.36px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group140 {
+  height: auto;
+  position: absolute;
+  left: 1239.1px;
+  top: 661.41px;
+  overflow: visible;
+}
+.group141 {
+  height: auto;
+  position: absolute;
+  left: 1261.44px;
+  top: 660.95px;
+  overflow: visible;
+}
+.group142 {
+  height: auto;
+  position: absolute;
+  left: 1279.72px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group143 {
+  height: auto;
+  position: absolute;
+  left: 1296.49px;
+  top: 661.5px;
+  overflow: visible;
+}
+.group144 {
+  height: auto;
+  position: absolute;
+  left: 942px;
+  top: 705.02px;
+  overflow: visible;
+}
+.group145 {
+  height: auto;
+  position: absolute;
+  left: 964.35px;
+  top: 704.57px;
+  overflow: visible;
+}
+.group146 {
+  height: auto;
+  position: absolute;
+  left: 982.63px;
+  top: 705.12px;
+  overflow: visible;
+}
+.group147 {
+  height: auto;
+  position: absolute;
+  left: 1000.82px;
+  top: 705.12px;
+  overflow: visible;
+}
+.group148 {
+  height: auto;
+  position: absolute;
+  left: 1015.67px;
+  top: 705.12px;
+  overflow: visible;
+}
+.group149 {
+  height: auto;
+  position: absolute;
+  left: 1032.41px;
+  top: 705.02px;
+  overflow: visible;
+}
+.group150 {
+  height: auto;
+  position: absolute;
+  left: 1050.96px;
+  top: 721.57px;
+  overflow: visible;
+}
+.group151 {
+  height: auto;
+  position: absolute;
+  left: 35.55px;
+  top: 752.87px;
+  overflow: visible;
+}
+.group152 {
+  height: auto;
+  position: absolute;
+  left: 75.55px;
+  top: 763.87px;
+  overflow: visible;
+}
+.group153 {
+  height: auto;
+  position: absolute;
+  left: 114.27px;
+  top: 746.23px;
+  overflow: visible;
+}
+.group154 {
+  height: auto;
+  position: absolute;
+  left: 138.01px;
+  top: 763.87px;
+  overflow: visible;
+}
+.group155 {
+  height: auto;
+  position: absolute;
+  left: 180.95px;
+  top: 764.03px;
+  overflow: visible;
+}
+.group156 {
+  height: auto;
+  position: absolute;
+  left: 206.17px;
+  top: 763.87px;
+  overflow: visible;
+}
+.group157 {
+  height: auto;
+  position: absolute;
+  left: 467.57px;
+  top: 751.48px;
+  overflow: visible;
+}
+.group158 {
+  height: auto;
+  position: absolute;
+  left: 514.79px;
+  top: 744.84px;
+  overflow: visible;
+}
+.group159 {
+  height: auto;
+  position: absolute;
+  left: 538.08px;
+  top: 752.11px;
+  overflow: visible;
+}
+.group160 {
+  height: auto;
+  position: absolute;
+  left: 564.52px;
+  top: 762.48px;
+  overflow: visible;
+}
+.group161 {
+  height: auto;
+  position: absolute;
+  left: 606.11px;
+  top: 762.64px;
+  overflow: visible;
+}
+.xd-components {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 5.42%;
+  height: 8.89%;
+  position: absolute;
+  right: 81.39%;
+  left: 13.19%;
+  bottom: 88.18%;
+  top: 2.93%;
+  overflow: hidden;
+}
+.component-5 {
+  flex-shrink: 0;
+  width: 38px;
+  height: 56px;
+  position: relative;
+  overflow: visible;
+}

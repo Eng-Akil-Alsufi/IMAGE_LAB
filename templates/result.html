@@ -1,0 +1,137 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>عرض النتائج</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        img {
+            max-width: 90%;
+            height: auto;
+            border: 2px solid #ccc;
+            margin: 10px 0;
+        }
+        h2 {
+            color: #333;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>نتيجة تحسين الصورة</h1>
+    
+    <div>
+        <h2>الصورة الأصلية</h2>
+        <img src="{{ url_for('static', filename='uploads/' + original_image) }}" alt="الصورة الأصلية">
+    </div>
+    
+    <div>
+        <h2>الصورة المحسنة</h2>
+        <img src="{{ url_for('static', filename='uploads/' + enhanced_image) }}" alt="الصورة المحسنة">
+    </div>
+    <a class="button" href="/p3">العودة إلى رفع صورة جديدة</a>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhancement Results</title>
+</head>
+<body>
+    <h1>Enhancement Results</h1>
+    <h2>Before:</h2>
+    <img src="{{ url_for('static', filename=original) }}" alt="Original Image">
+    <h2>After:</h2>
+    <img src="{{ url_for('static', filename=enhanced) }}" alt="Enhanced Image">
+    <a href="/">Upload another image</a>
+</body>
+</html> -->
+=======
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>عرض النتائج</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        img {
+            max-width: 90%;
+            height: auto;
+            border: 2px solid #ccc;
+            margin: 10px 0;
+        }
+        h2 {
+            color: #333;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>نتيجة تحسين الصورة</h1>
+    
+    <div>
+        <h2>الصورة الأصلية</h2>
+        <img src="{{ url_for('static', filename='uploads/' + original_image) }}" alt="الصورة الأصلية">
+    </div>
+    
+    <div>
+        <h2>الصورة المحسنة</h2>
+        <img src="{{ url_for('static', filename='uploads/' + enhanced_image) }}" alt="الصورة المحسنة">
+    </div>
+    <a class="button" href="/p3">العودة إلى رفع صورة جديدة</a>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhancement Results</title>
+</head>
+<body>
+    <h1>Enhancement Results</h1>
+    <h2>Before:</h2>
+    <img src="{{ url_for('static', filename=original) }}" alt="Original Image">
+    <h2>After:</h2>
+    <img src="{{ url_for('static', filename=enhanced) }}" alt="Enhanced Image">
+    <a href="/">Upload another image</a>
+</body>
+</html> -->
+>>>>>>> a9ae863c04e81fb37b062c7c7852a6428f7b6584

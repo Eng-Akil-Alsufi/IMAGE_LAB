@@ -1,0 +1,92 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتيجة كشف التلاعب</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            direction: rtl;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>نتيجة كشف التلاعب</h1>
+    <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="الصورة المحللة">
+    <p>{{ result }}</p>
+    <a href="{{ url_for('page4') }}">العودة إلى الصفحة الرئيسية</a>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتيجة كشف التلاعب</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            direction: rtl;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>نتيجة كشف التلاعب</h1>
+    <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="الصورة المحللة">
+    <p>{{ result }}</p>
+    <a href="{{ url_for('page4') }}">العودة إلى الصفحة الرئيسية</a>
+</body>
+>>>>>>> a9ae863c04e81fb37b062c7c7852a6428f7b6584
+</html>

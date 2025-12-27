@@ -1,0 +1,446 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليل ألوان الصورة</title>
+            <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+
+        .color-chart {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-height: 500px;
+            overflow-y: auto;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .color-info {
+            flex: 0 1 calc(50% - 30px);
+            max-width: 400px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #colorDistributionChart {
+            width: 100%;
+            max-height: 400px;
+            margin: 20px auto;
+        }
+        
+
+        .color-box {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+ 
+            .color-info:hover {
+            transform: scale(1.02);
+            }
+            .color-details {
+            margin-right: 20px;
+            }
+            .color-details p {
+            margin: 8px 0;
+            color: #333;
+            }
+            .back-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+            }
+            .back-button:hover {
+            background-color: #45a049;
+            }
+            .image-container {
+            text-align: center;
+            margin-bottom: 30px;
+            }
+            .image-container img {
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            }
+            #colorDistributionChart {
+            max-width: 100%;
+            margin: 20px auto;
+            }
+
+            #colorDistributionChart {
+            max-width: 100%;
+            height: 400px;  /* حدد ارتفاع ثابت */
+            margin: 20px auto;
+            }
+
+        @media (max-width: 768px) {
+            .color-info {
+                flex: 0 1 100%;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+       
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: #333;">تحليل ألوان الصورة</h1>
+        
+        <!-- عرض الصورة الأصلية -->
+        <div class="image-container">
+            <h2>الصورة الأصلية</h2>
+            <img src="{{ url_for('static', filename='uploads/' + original_image) }}" alt="الصورة الأصلية">
+        </div>
+
+        <h2>تحليل الألوان</h2>
+        
+        <div class="color-chart">
+            {% for color in color_analysis %}
+            <div class="color-info">
+                <div class="color-box" style='background-color: {{ color.hex }}'></div>
+                <div class="color-details">
+                    <p><strong>اللون:</strong> {{ color.name }}</p>
+                    <p><strong>الكود اللوني:</strong> {{ color.hex }}</p>
+                    <p><strong>RGB:</strong> {{ color.rgb[0] }}, {{ color.rgb[1] }}, {{ color.rgb[2] }}</p>
+                    <p><strong>النسبة:</strong> {{ color.percentage }}%</p>
+                    <p><strong>التشبع:</strong> {{ color.saturation }}%</p>
+                    <p><strong>القيمة:</strong> {{ color.value }}%</p>
+                    <p><strong>درجة اللون:</strong> {{ color.hue }}°</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- رسم بياني للألوان -->
+        <div>
+            <h2 style="text-align: center;">التوزيع اللوني</h2>
+            <canvas id="colorDistributionChart"></canvas>
+        </div>
+
+        <!-- زر العودة -->
+        <div style="text-align: center;">
+            <a href="/p5" class="back-button">العودة للصفحة الرئيسية</a>
+        </div>
+    </div>
+
+    <!-- مكتبة Chart.js للرسوم البيانية -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // تحويل البيانات بشكل صحيح
+            var colorAnalysis = JSON.parse('{{ color_analysis | tojson | safe }}');
+            
+            // التحقق من وجود بيانات كافية للرسم
+            if (colorAnalysis && colorAnalysis.length > 0) {
+                var ctx = document.getElementById('colorDistributionChart').getContext('2d');
+                
+                // التأكد من وجود العنصر
+                if (ctx) {
+                    new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                            labels: colorAnalysis.map(function(color) { 
+                                return color.name || 'لون غير محدد'; 
+                            }),
+                            datasets: [{
+                                data: colorAnalysis.map(function(color) { 
+                                    return color.percentage || 0; 
+                                }),
+                                backgroundColor: colorAnalysis.map(function(color) { 
+                                    return color.hex || '#000000'; 
+                                })
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            layout: {
+                                padding: {
+                                    top: 20,
+                                    bottom: 20,
+                                    left: 20,
+                                    right: 20
+                                }
+                            },
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'توزيع الألوان'
+                                },
+                                legend: {
+                                    position: 'bottom'
+                                }
+                            }
+                        }
+                    });
+                } else {
+                    console.error('لم يتم العثور على عنصر الرسم البياني');
+                }
+            } else {
+                console.error('لا توجد بيانات للرسم البياني');
+            }
+        });
+    </script>
+</body>
+=======
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليل ألوان الصورة</title>
+            <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+
+        .color-chart {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-height: 500px;
+            overflow-y: auto;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .color-info {
+            flex: 0 1 calc(50% - 30px);
+            max-width: 400px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #colorDistributionChart {
+            width: 100%;
+            max-height: 400px;
+            margin: 20px auto;
+        }
+        
+
+        .color-box {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+ 
+            .color-info:hover {
+            transform: scale(1.02);
+            }
+            .color-details {
+            margin-right: 20px;
+            }
+            .color-details p {
+            margin: 8px 0;
+            color: #333;
+            }
+            .back-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+            }
+            .back-button:hover {
+            background-color: #45a049;
+            }
+            .image-container {
+            text-align: center;
+            margin-bottom: 30px;
+            }
+            .image-container img {
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+            }
+            #colorDistributionChart {
+            max-width: 100%;
+            margin: 20px auto;
+            }
+
+            #colorDistributionChart {
+            max-width: 100%;
+            height: 400px;  /* حدد ارتفاع ثابت */
+            margin: 20px auto;
+            }
+
+        @media (max-width: 768px) {
+            .color-info {
+                flex: 0 1 100%;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+       
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: #333;">تحليل ألوان الصورة</h1>
+        
+        <!-- عرض الصورة الأصلية -->
+        <div class="image-container">
+            <h2>الصورة الأصلية</h2>
+            <img src="{{ url_for('static', filename='uploads/' + original_image) }}" alt="الصورة الأصلية">
+        </div>
+
+        <h2>تحليل الألوان</h2>
+        
+        <div class="color-chart">
+            {% for color in color_analysis %}
+            <div class="color-info">
+                <div class="color-box" style='background-color: {{ color.hex }}'></div>
+                <div class="color-details">
+                    <p><strong>اللون:</strong> {{ color.name }}</p>
+                    <p><strong>الكود اللوني:</strong> {{ color.hex }}</p>
+                    <p><strong>RGB:</strong> {{ color.rgb[0] }}, {{ color.rgb[1] }}, {{ color.rgb[2] }}</p>
+                    <p><strong>النسبة:</strong> {{ color.percentage }}%</p>
+                    <p><strong>التشبع:</strong> {{ color.saturation }}%</p>
+                    <p><strong>القيمة:</strong> {{ color.value }}%</p>
+                    <p><strong>درجة اللون:</strong> {{ color.hue }}°</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- رسم بياني للألوان -->
+        <div>
+            <h2 style="text-align: center;">التوزيع اللوني</h2>
+            <canvas id="colorDistributionChart"></canvas>
+        </div>
+
+        <!-- زر العودة -->
+        <div style="text-align: center;">
+            <a href="/p5" class="back-button">العودة للصفحة الرئيسية</a>
+        </div>
+    </div>
+
+    <!-- مكتبة Chart.js للرسوم البيانية -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // تحويل البيانات بشكل صحيح
+            var colorAnalysis = JSON.parse('{{ color_analysis | tojson | safe }}');
+            
+            // التحقق من وجود بيانات كافية للرسم
+            if (colorAnalysis && colorAnalysis.length > 0) {
+                var ctx = document.getElementById('colorDistributionChart').getContext('2d');
+                
+                // التأكد من وجود العنصر
+                if (ctx) {
+                    new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                            labels: colorAnalysis.map(function(color) { 
+                                return color.name || 'لون غير محدد'; 
+                            }),
+                            datasets: [{
+                                data: colorAnalysis.map(function(color) { 
+                                    return color.percentage || 0; 
+                                }),
+                                backgroundColor: colorAnalysis.map(function(color) { 
+                                    return color.hex || '#000000'; 
+                                })
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            layout: {
+                                padding: {
+                                    top: 20,
+                                    bottom: 20,
+                                    left: 20,
+                                    right: 20
+                                }
+                            },
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'توزيع الألوان'
+                                },
+                                legend: {
+                                    position: 'bottom'
+                                }
+                            }
+                        }
+                    });
+                } else {
+                    console.error('لم يتم العثور على عنصر الرسم البياني');
+                }
+            } else {
+                console.error('لا توجد بيانات للرسم البياني');
+            }
+        });
+    </script>
+</body>
+>>>>>>> a9ae863c04e81fb37b062c7c7852a6428f7b6584
+</html>
